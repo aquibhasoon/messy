@@ -8,3 +8,13 @@ class Messcut(models.Model):
 
 	def __str__(self):
 		return f"Messcut from {self.start_date} to {self.end_date}"
+
+
+class Messmenu(models.Model):
+	date = models.DateField()
+	breakfast = models.TextField()
+	lunch = models.TextField()
+	dinner = models.TextField()
+
+	def __str__(self):
+		return f"Menu for {self.date}"

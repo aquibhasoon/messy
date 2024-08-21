@@ -21,3 +21,6 @@ class Application(models.Model):
 		return str(self.applicant.username + ' - ' + self.created_at.strftime('%d-%m-%Y'))
 
 
+class AcceptedApplication(Application):
+    class Meta:
+        proxy = True
