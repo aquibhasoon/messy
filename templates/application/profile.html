@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Profile{% endblock %}
+
+{% block content %}
+<section style="background-color: #fefefe;">
+  <div class="container py-5">
+
+    <!-- Profile and Details -->
+    <div class="row">
+      <!-- Profile Card -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card">
+          <div class="card-body text-center">
+            <img src="{% static 'images/prof.png' %}" alt="Profile Picture" class="rounded-circle img-fluid" style="width: 150px; height: 150px;">
+            <h5 class="my-3">{{ name }}</h5>
+            <p class="text-muted mb-1">{{ Department }}</p>
+            <p class="text-muted mb-4">{{ hostel_name }}</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Profile Details -->
+      <div class="col-lg-8 col-md-12">
+        <div class="card mb-4">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-sm-4 col-12">
+                <p class="mb-0"><strong>Full Name:</strong></p>
+              </div>
+              <div class="col-sm-8 col-12">
+                <p class="text-muted mb-0">{{ name }}</p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-4 col-12">
+                <p class="mb-0"><strong>Mess number:</strong></p>
+              </div>
+              <div class="col-sm-8 col-12">
+                <p class="text-muted mb-0">{{ messnum }}</p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-4 col-12">
+                <p class="mb-0"><strong>Department:</strong></p>
+              </div>
+              <div class="col-sm-8 col-12">
+                <p class="text-muted mb-0">{{ Department }}</p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-4 col-12">
+                <p class="mb-0"><strong>Semester:</strong></p>
+              </div>
+              <div class="col-sm-8 col-12">
+                <p class="text-muted mb-0">{{ Semester }}</p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-4 col-12">
+                <p class="mb-0"><strong>Hostel:</strong></p>
+              </div>
+              <div class="col-sm-8 col-12">
+                <p class="text-muted mb-0">{{ Hostel }}</p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-4 col-12">
+                <p class="mb-0"><strong>Claim:</strong></p>
+              </div>
+              <div class="col-sm-8 col-12">
+                <p class="text-muted mb-0">{{ Claim }}</p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-4 col-12">
+                <p class="mb-0"><strong>Food Preference:</strong></p>
+              </div>
+              <div class="col-sm-8 col-12">
+                <p class="text-muted mb-0">{{ Foodpref }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- QR Code -->
+        <div class="card">
+          <div class="card-body text-center">
+            <h5 class="my-3">QR Code</h5>
+            <img src="{% static 'images/QR.webp' %}" alt="QR Code" class="img-fluid" style="max-width: 200px; height: auto;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+{% endblock %}
